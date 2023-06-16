@@ -235,11 +235,17 @@ header {
 
 /* Tiles */
 .radio-container {
-    display: block;
-    justify-content: center;
+    display: flex;
+    /* justify-content: center; */
     align-items: center;
     margin: 35px 30px;
     height: 130px;
+}
+
+@media (max-width: 1024px) {
+    .radio-container {
+        margin: 55px 30px;
+    }
 }
 
 .radio-tile-group {
@@ -250,11 +256,24 @@ header {
     position: absolute;
 }
 
+@media (max-width: 1024px) {
+    .radio-tile-group {
+        gap: 40px;
+    }
+}
+
 .radio-tile-group .input-container {
     position: relative;
-    height: 6rem;
-    width: 6rem;
+    height: 5.3rem;
+    width: 5.3rem;
     margin: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+    .radio-tile-group .input-container {
+        height: 9rem;
+        width: 9rem;
+    }
 }
 
 .radio-tile-group .input-container .radio-button {
@@ -262,10 +281,17 @@ header {
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
-    width: 100%;
+    height: 8rem;
+    width: 8rem;
     margin: 0;
     cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .radio-tile-group .input-container .radio-button {
+        height: 11rem;
+        width: 11rem;
+    }
 }
 
 .radio-tile-group .input-container .radio-tile {

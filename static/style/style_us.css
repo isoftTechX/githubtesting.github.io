@@ -127,7 +127,13 @@ header {
     margin-top: 10%;
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1200px) {
+    .title h1 {
+        margin-top: 32%;
+    }
+}
+
+@media (max-width: 1400px) {
     .title {
         text-align: right;
     }

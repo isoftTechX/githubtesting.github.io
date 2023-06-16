@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <title>Contact | isoftTechX</title>
@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="static/style/style_contact.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
     <script src="./static/script/script_contact.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
 
 <body>
@@ -50,7 +51,7 @@
         </main>
     </div>
     <div class="contact container">
-        <form>
+        <form id="contact-form" method="post" action="#">
             <div class="form">
                 <div class="form-txt">
                     <h1>Contact Us</h1>
@@ -62,14 +63,14 @@
                     <p>Ambedkar Nagar, Akbarpur, Kanpur (D.)<br>Uttar Pradesh PIN - 209101</p>
                 </div>
                 <div class="form-details">
+                    <input type="text" name="name" id="pname" autocomplete="off" placeholder="Product Name" required>
                     <input type="text" name="name" id="name" autocomplete="off" placeholder="Name" required>
-                    <input type="email" name="email" id="email" autocomplete="off" placeholder="Email" required>
                     <div class="radio-container">
                         <div class="radio-tile-group">
                             <div class="input-container">
-                                <input id="walk" class="radio-button" type="radio" name="radio" />
+                                <input class="radio-button" type="radio" name="services" value="1" required/>
                                 <div class="radio-tile">
-                                    <div class="icon walk-icon">
+                                    <div class="icon">
                                         <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt"
                                             height="512.000000pt" viewBox="0 0 512.000000 512.000000"
                                             preserveAspectRatio="xMidYMid meet">
@@ -106,14 +107,14 @@
                                             </g>
                                         </svg>
                                     </div>
-                                    <label for="walk" class="radio-tile-label">Software Development</label>
+                                    <label class="radio-tile-label">Software Development</label>
                                 </div>
                             </div>
 
                             <div class="input-container">
-                                <input id="bike" class="radio-button" type="radio" name="radio" />
+                                <input class="radio-button" type="radio" name="services" value="2" required/>
                                 <div class="radio-tile">
-                                    <div class="icon bike-icon">
+                                    <div class="icon">
                                         <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt"
                                             height="512.000000pt" viewBox="0 0 512.000000 512.000000"
                                             preserveAspectRatio="xMidYMid meet">
@@ -182,14 +183,14 @@
                                         </svg>
 
                                     </div>
-                                    <label for="bike" class="radio-tile-label">Website Development</label>
+                                    <label class="radio-tile-label">Website Development</label>
                                 </div>
                             </div>
 
                             <div class="input-container">
-                                <input id="drive" class="radio-button" type="radio" name="radio" />
+                                <input class="radio-button" type="radio" name="services" value="3" required/>
                                 <div class="radio-tile">
-                                    <div class="icon car-icon">
+                                    <div class="icon">
                                         <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt"
                                             height="512.000000pt" viewBox="0 0 512.000000 512.000000"
                                             preserveAspectRatio="xMidYMid meet">
@@ -232,14 +233,14 @@
                                             </g>
                                         </svg>
                                     </div>
-                                    <label for="drive" class="radio-tile-label">UI/UX Designing</label>
+                                    <label class="radio-tile-label">UI/UX Designing</label>
                                 </div>
                             </div>
 
                             <div class="input-container">
-                                <input id="fly" class="radio-button" type="radio" name="radio" />
+                                <input class="radio-button" type="radio" name="services" value="4" required/>
                                 <div class="radio-tile">
-                                    <div class="icon fly-icon">
+                                    <div class="icon">
                                         <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt"
                                             height="512.000000pt" viewBox="0 0 512.000000 512.000000"
                                             preserveAspectRatio="xMidYMid meet">
@@ -324,7 +325,7 @@
                                         </svg>
 
                                     </div>
-                                    <label for="fly" class="radio-tile-label">Maintenance &#38; Support</label>
+                                    <label class="radio-tile-label">Maintenance &#38; Support</label>
                                 </div>
                             </div>
                         </div>

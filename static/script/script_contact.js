@@ -66,10 +66,60 @@ window.addEventListener('load', function () {
                 bar.style.width = "100%";
                 page.addEventListener("mouseout", function () {
                     activebar.style.width = "100%";
-                    bar.style.width = "0";    
+                    bar.style.width = "0";
                 })
             }
         })
     });
+
+
+    const radios = document.getElementsByName('services');
+    var subject = ""
+
+    for (let i = 0; i < radios.length; i++) {
+        radios[i].addEventListener('change', function () {
+            if (this.checked && this.value === '1') {
+                subject = "Custom Software Development";
+                radios.forEach(radio => {
+                    radio.required = false;
+                })
+            }
+            if (this.checked && this.value === '2') {
+                subject = "Web Application Development";
+                radios.forEach(radio => {
+                    radio.required = false;
+                })
+            }
+            if (this.checked && this.value === '3') {
+                subject = "User interfaces and User Experience Design";
+                radios.forEach(radio => {
+                    radio.required = false;
+                })
+            }
+            if (this.checked && this.value === '4') {
+                subject = "Software Maintenance and Support";
+                radios.forEach(radio => {
+                    radio.required = false;
+                })
+            }
+        });
+    }
+
+
+    document.getElementById("contact-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+        sendEmail();
+    });
+
+    function sendEmail() {
+        var pname = document.getElementById("pname").value;
+        var message = document.getElementById("message").value;
+        console.log(pname, subject, message)
+
+        window.location.replace("mailto:isofttechx@gmail.com?cc=gautam.prashant0603@gmail.com&subject=" + pname + " (" + subject + ")" + "&body=" + message);
+
+    }
+
+
 })
 
